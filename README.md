@@ -1,7 +1,41 @@
+## Step By Step Installation, Setup and Commands
+
+- composer create-project laravel/laravel larvel_project_name
+- composer require livewire/livewire
+- create database and include in .env
+- setup html template in laravel
+- php artisan make:livewire HomeConponent
+- add slot in main layout file and also add livewirescript and livewire style in main file
+- php artisan make:livewire ShopComponent
+- php artisan make:livewire CartComponent
+- php artisan make:livewire CheckoutComponent
+- add shop, cart and checkout page with livewire component
+- add breeze authentication 
+- first copy web.php file and also copy app.blade.php layout file
+- composer require laravel/breeze --dev
+- composer artisan breeze:install
+- after installation change in web.php and replace app.blade.php
+- add column 'utype' in user table migration and run migrate
+- npm inhstall && npm run build
+- add login link and register link on menu aslo add condition auth logout esle login and register
+- for logout use form and post method and submit using onclick in button event
+- make middleware run: php artisan make:middleware AuthAdmin
+- add conddition in AuthAdmin middleware file 'utype'
+- add middleware in kernal.php file
+- change public const HOME = '/dashboard' to '/' in RouteServviceProvider.php 
+- php artisan make:livewire Admin/AdminDashboardComponent
+- php artisan make:livewire User/UserDashboardComponent
+- remove breeze dashboard route from web.php file
+- create middleware group route for user and Admin for Admin route group add authadmin middleware also
+- add link for user dashboard and admin dashboard in menu
+- 
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+
+
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
